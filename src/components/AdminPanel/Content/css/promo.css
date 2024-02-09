@@ -1,0 +1,59 @@
+.pormo-container {
+  width: 100%;
+  box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.add-promo-btn {
+  background: #ffff;
+  text-decoration: none;
+}
+
+.promo-codes {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.particular-promo {
+  width: 90%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.promo-top {
+  background: #ffff;
+  margin-bottom: 2px;
+  padding: 15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-top-left,
+.promo-top-right {
+  display: flex;
+  gap: 20px;
+}
+
+.promo-bottom {
+  background: #ffff;
+  padding: 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-btn {
+  width: 130px;
+  background: yellow;
+}
+
+.active {
+  width: 130px;
+  background: burlywood;
+}

@@ -1,0 +1,60 @@
+.others-container {
+  width: 100%;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.others-top {
+  width: 80%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.others-bottom {
+  width: 90%;
+  box-sizing: border-box;
+  margin-top: 50px;
+  /* height: 50vh;
+  overflow-y: scroll; */
+}
+
+.type {
+  width: 15%;
+  height: 60px;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+.type,
+tr {
+  padding: 20px;
+}
+
+tr {
+  border-radius: 15px;
+}
+
+.alls {
+  background: yellow;
+  color: black;
+}
+
+.pending {
+  background: blue;
+  color: white;
+}
+
+.confirmed {
+  background: green;
+  color: white;
+}
+
+.canceled {
+  background: red;
+  color: white;
+}

@@ -1,0 +1,83 @@
+.add-promo-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-promo-prompt {
+  width: 20%;
+  min-height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: #ffff;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.add-promo-item {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.add-promo-item > input {
+  padding: 10px;
+  outline: none;
+  border-radius: 8px;
+  border: 2px solid rgba(169, 169, 169, 0.5);
+}
+
+.add-promo-prompt > button {
+  min-width: 130px;
+  background: yellow;
+}
+
+.active-inactive {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.active-inactive-right {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.yes {
+  position: absolute;
+  right: 40px;
+}
+
+.no {
+  position: absolute;
+  right: 2px;
+}
+
+.yes,
+.no {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.yes-active {
+  background: green;
+}
+
+.no-active {
+  background: coral;
+}

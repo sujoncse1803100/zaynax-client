@@ -1,0 +1,78 @@
+.topbar-container {
+  display: flex;
+  background: #ffffff;
+  width: 100hw;
+}
+
+.logo {
+  flex: 2;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+.others {
+  flex: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.left {
+  flex: 3;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  gap: 15px;
+}
+
+.left > input {
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.right {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.cart-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.amount {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.count {
+  background: rgb(248, 209, 110);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}

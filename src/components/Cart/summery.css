@@ -1,0 +1,65 @@
+.pricing1 {
+  flex: 2;
+}
+
+.heading1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffff;
+  padding: 20px 0px;
+  margin-bottom: 2px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.calculations1 {
+  background: #ffff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.particualt-calculation1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 15px;
+}
+
+.dotted-line1 {
+  border-top: 1px dotted #000;
+  width: 100%;
+  margin: 15px 0 !important;
+  opacity: 0.3;
+}
+
+.promo-container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0px;
+  padding: 8px 15px;
+}
+
+.pomo-code-input1 {
+  width: 60%;
+  outline: none;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid rgb(236, 234, 234);
+}
+
+.apply-button1 {
+  width: 40%;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid rgb(236, 234, 234);
+  background: rgb(248, 245, 245);
+  cursor: pointer;
+}
+
+.promo-error {
+  font-size: 15px;
+  margin-left: 20px;
+  color: red;
+}

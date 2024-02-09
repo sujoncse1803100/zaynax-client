@@ -1,0 +1,113 @@
+.signup-container3 {
+  width: 100%;
+  height: calc(100vh - 250px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prompt3 {
+  min-width: 20%;
+  min-height: 30%;
+  background: #ffff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.items3 {
+  margin: 10px 0px;
+}
+
+.items3 > input {
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  opacity: 0.5;
+  border: 2px solid rgba(169, 169, 169, 0.5);
+}
+
+.hints3 {
+  padding: 20px;
+  border: 2px solid rgba(169, 169, 169, 0.5);
+  box-sizing: border-box;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.submit-button3 {
+  width: 150px;
+  margin: 10px auto;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background: yellow;
+  cursor: pointer;
+}
+
+/* admin topbar end.......... */
+
+.admin-topbar-container {
+  display: flex;
+  background: #ffffff;
+  width: 100hw;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(169, 169, 169, 0.5);
+}
+
+.admin-logo {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+.admin-others {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* admin topbar end........ */
+
+.main-unique {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar-unique {
+  flex: 1.5;
+  height: calc(100vh - 110px);
+  padding: 0;
+  margin: 0;
+  background: #ffff;
+}
+
+.sidebar-list {
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content-unique {
+  flex: 10;
+  padding-top: 10px;
+  padding-left: 20px;
+  height: calc(100vh - 120px);
+}
+
+ul {
+  margin: 0px 25px !important;
+  padding: 0;
+}
+
+li {
+  margin: 0px 17px;
+}
