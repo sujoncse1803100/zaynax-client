@@ -3,7 +3,7 @@ import Topbar from "../Topbar/Topbar";
 import "./style.css";
 import Confirmation from "../Confirmation/Confirmation";
 import { useRegisterMutation } from "../../features/auth/authApi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoggedIn } from "../../features/auth/authSlice";
 
@@ -14,10 +14,14 @@ const Signup = () => {
     phone: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const loggedInUser = useSelector((state) => state.user.user);
   useEffect(() => {
-    loggedInUser && navigate("/cart");
+    if (loggedInUser) {
+      setConfirmation(false);
+      navigate("/cart");
+    }
   }, [loggedInUser]);
 
   const dispatch = useDispatch();
@@ -28,7 +32,7 @@ const Signup = () => {
       setTimeout(() => {
         setConfirmation(false);
         dispatch(userLoggedIn(user));
-        navegate("/cart");
+        navigate("/cart");
       }, 2000);
     }
 
