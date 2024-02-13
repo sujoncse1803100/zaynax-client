@@ -1,11 +1,7 @@
 {
-    "version": 2,
-    "name": "zaynaz-group-task",
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/" 
-      }
-    ]
-  }
-  
+  "version": 2,
+  "name": "zaynaz-group-task",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
