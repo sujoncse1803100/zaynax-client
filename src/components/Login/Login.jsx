@@ -19,7 +19,7 @@ const Login = () => {
 
   const loggedInUser = useSelector((state) => state.user.user);
   useEffect(() => {
-    loggedInUser && navigate("/adminpanel");
+    loggedInUser && navigate("/cart");
   }, [loggedInUser]);
 
   useEffect(() => {
