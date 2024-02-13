@@ -180,7 +180,9 @@ const Cart = () => {
                   <Summery setDiscountRate={setDiscountRate} orders={orders} />
                 </>
               ) : (
-                <div>No Order Found</div>
+                <div className="cart-item-not-found">
+                  Your Cart Is Empty.!!!
+                </div>
               )}
             </div>
           </div>
