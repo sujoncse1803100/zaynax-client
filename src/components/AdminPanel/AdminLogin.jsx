@@ -3,9 +3,10 @@ import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { useLoginMutation } from "../../features/auth/authApi";
 import { userLoggedIn } from "../../features/auth/authSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const AdminLogin = () => {
+  const loggedInUser = useSelector((state) => state.user.user);
   const navigate = useNavigate();
   const [login, { isSuccess, data: user }] = useLoginMutation();
   const [data, setData] = useState({
@@ -13,12 +14,22 @@ const AdminLogin = () => {
     password: "",
   });
 
+  const [isAdmin, setIsAdmin] = useState(loggedInUser?.isAdmin);
+
+  useEffect(() => {
+    loggedInUser && isAdmin && navigate("/adminpanel");
+  }, [loggedInUser]);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (isSuccess) {
       dispatch(userLoggedIn(user));
-      navigate("/adminpanel");
+      if (user.isAdmin) {
+        navigate("/adminpanel");
+      } else {
+        setIsAdmin(false);
+      }
     }
   }, [isSuccess]);
 
@@ -32,7 +43,6 @@ const AdminLogin = () => {
     e.preventDefault();
 
     if (data.phone && data.password) {
-      console.log(data);
       login({ ...data });
     }
   };
@@ -55,6 +65,10 @@ const AdminLogin = () => {
           <button onClick={handleAdminLogin} className="submit-button3">
             Sign In
           </button>
+
+          {loggedInUser && !isAdmin && (
+            <div className="not-admin">You are not admin</div>
+          )}
         </form>
 
         <div className="hints3">

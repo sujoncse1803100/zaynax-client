@@ -4,16 +4,21 @@ import "./style.css";
 import Confirmation from "../Confirmation/Confirmation";
 import { useRegisterMutation } from "../../features/auth/authApi";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { userLoggedIn } from "../../features/auth/authSlice";
 
 const Signup = () => {
   const [confirmation, setConfirmation] = useState(false);
-  const [register, { isSuccess, data: user }] = useRegisterMutation();
+  const [register, { isSuccess, data: user, isError }] = useRegisterMutation();
   const [data, setData] = useState({
     phone: "",
     password: "",
   });
+
+  const loggedInUser = useSelector((state) => state.user.user);
+  useEffect(() => {
+    loggedInUser && navigate("/adminpanel");
+  }, [loggedInUser]);
 
   const dispatch = useDispatch();
 
@@ -26,7 +31,11 @@ const Signup = () => {
         navegate("/cart");
       }, 2000);
     }
-  }, [isSuccess]);
+
+    if (isError) {
+      console.log(isError);
+    }
+  }, [isSuccess, isError]);
 
   const handleInput = (e) => {
     const newData = { ...data };
@@ -66,6 +75,11 @@ const Signup = () => {
               <button type="submit" className="submit-button1">
                 Sign Up
               </button>
+              {isError && (
+                <div className="error">
+                  Phone Number Already Used or Internal Server Error
+                </div>
+              )}
               <div className="phone1 items1">
                 <p>
                   already signup?

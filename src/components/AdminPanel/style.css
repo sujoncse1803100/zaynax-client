@@ -7,6 +7,10 @@
   flex-direction: column;
 }
 
+.not-admin {
+  color: red;
+}
+
 .prompt3 {
   min-width: 20%;
   min-height: 30%;

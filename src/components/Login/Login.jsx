@@ -4,7 +4,7 @@ import "./style.css";
 import { useLoginMutation } from "../../features/auth/authApi";
 import Confirmation from "../Confirmation/Confirmation";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { userLoggedIn } from "../../features/auth/authSlice";
 
 const Login = () => {
@@ -16,6 +16,11 @@ const Login = () => {
     phone: "",
     password: "",
   });
+
+  const loggedInUser = useSelector((state) => state.user.user);
+  useEffect(() => {
+    loggedInUser && navigate("/adminpanel");
+  }, [loggedInUser]);
 
   useEffect(() => {
     if (isSuccess) {
