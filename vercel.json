@@ -2,6 +2,6 @@
   "version": 2,
   "name": "zaynaz-group-task",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
