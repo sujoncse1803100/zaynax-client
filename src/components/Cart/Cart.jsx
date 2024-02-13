@@ -107,6 +107,7 @@ const Cart = () => {
       setPlaced(true);
       if (accept) {
         addOrder(finalOrder);
+        setCart({});
         setAccept(false);
       } else {
         console.log("something worng");
